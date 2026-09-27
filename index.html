@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090a12">
+<title>QR APPS V2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <section id="splash" class="screen splash active">
+    <button id="skip" class="skip">LEWATI</button>
+    <div class="stars"></div>
+    <div class="splash-logo"><span>QR</span></div>
+    <div class="eyebrow">SMART PAYMENT EXPERIENCE</div>
+    <h1>QR <b>APPS</b><small>V2</small></h1>
+    <p class="muted">Pembayaran cepat • simpel • modern</p>
+    <div class="loader"><i id="bar"></i></div>
+    <div id="timer" class="timer">10 detik</div>
+  </section>
+
+  <section id="home" class="screen">
+    <header class="header">
+      <div>
+        <div class="eyebrow">QR APPS V2</div>
+        <h2>Pembayaran</h2>
+      </div>
+      <div class="secure">✓ AMAN</div>
+    </header>
+
+    <div class="hero glass">
+      <div class="badge">QRIS PAYMENT</div>
+      <h3>Bayar dengan mudah</h3>
+      <p>Scan QRIS atau lanjut menggunakan metode DANA.</p>
+      <div class="qr-wrap"><img src="assets/qris.jpg" alt="QR pembayaran"></div>
+      <div class="qr-caption">Pastikan nama penerima sesuai sebelum membayar.</div>
+    </div>
+
+    <div class="methods">
+      <button class="method selected" data-method="dana">
+        <span class="method-icon dana">D</span>
+        <span><strong>DANA</strong><small>Transfer ke nomor tujuan</small></span>
+        <span class="radio">✓</span>
+      </button>
+      <button class="method" data-method="qris">
+        <span class="method-icon qris">▦</span>
+        <span><strong>QRIS</strong><small>Scan QR pembayaran</small></span>
+        <span class="radio">○</span>
+      </button>
+    </div>
+
+    <div class="glass form-card">
+      <label for="amount">NOMINAL PEMBAYARAN</label>
+      <div class="amount-box"><span>Rp</span><input id="amount" inputmode="numeric" placeholder="0" autocomplete="off"></div>
+
+      <div class="recipient">
+        <span>Tujuan DANA</span>
+        <div><strong id="phone">083867468118</strong><button id="copy" class="copy">COPY</button></div>
+      </div>
+      <div class="recipient">
+        <span>Nama penerima</span><strong>LIP</strong>
+      </div>
+
+      <button id="confirm" class="confirm">KONFIRMASI PEMBAYARAN <span>→</span></button>
+      <p id="hint" class="hint"></p>
+    </div>
+
+    <p class="disclaimer">QR APPS tidak menganggap pembayaran berhasil hanya karena tombol dikonfirmasi. Selalu periksa status transaksi di aplikasi pembayaran.</p>
+  </section>
+
+  <section id="success" class="screen result">
+    <div class="success-icon">✓</div>
+    <div class="eyebrow">SIAP DILANJUTKAN</div>
+    <h2>Pembayaran disiapkan</h2>
+    <p class="muted">Nomor tujuan sudah disalin. Lanjutkan transaksi di aplikasi DANA dan periksa detail penerima sebelum membayar.</p>
+    <div class="summary glass">
+      <div><span>Tujuan</span><b>083867468118</b></div>
+      <div><span>A/N</span><b>LIP</b></div>
+      <div><span>Nominal</span><b id="summaryAmount">Rp0</b></div>
+    </div>
+    <button id="openDana" class="confirm">BUKA DANA <span>→</span></button>
+    <button id="backHome" class="outline">KEMBALI</button>
+  </section>
+
+  <div id="toast" class="toast"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
